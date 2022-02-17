@@ -62,12 +62,14 @@ class Report(models.Model):
     customer = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
-        verbose_name='Кто жаловался'
+        verbose_name='Кто жаловался',
+        related_name='reports'
     )
     flat = models.ForeignKey(
         Flat,
         on_delete=models.CASCADE,
-        verbose_name='Квартира'
+        verbose_name='Квартира',
+        related_name='reports'
     )
     message = models.TextField('Текст жалобы')
 
