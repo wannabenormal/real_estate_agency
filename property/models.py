@@ -59,10 +59,10 @@ class Flat(models.Model):
 
 
 class Report(models.Model):
-    user = models.ForeignKey(
+    customer = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
-        verbose_name='Пользователь'
+        verbose_name='Кто жаловался'
     )
     flat = models.ForeignKey(
         Flat,
